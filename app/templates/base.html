@@ -1,0 +1,37 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} Jess + Rob</title>
+    {% else %}
+    <title>Jess + Rob</title>
+    {% endif %}
+  </head>
+<style>
+    heydork {
+        Hi friend! You've found me. This is my first flask app! Come to my wedding.
+    }
+
+    body {
+        font-family: Helvetica, Arial, Sans-Serif;
+        color: #ffffff;
+        text-transform: uppercase;
+        background-color: #000000
+    }
+
+    h1 {font-size: 40pt;}
+    h2 {font-size: 20pt;}
+    h3 {font-size: 6pt;}
+
+    a:link, a:visited, a:hover, a:active 
+    {
+        color:#ffffff; 
+        background-color:transparent; 
+        text-decoration:none
+    }
+</style>
+  <body>
+    <img src="http://i.imgur.com/u1dALv2.jpg?1"allign="left"><img src="http://i.imgur.com/u1dALv2.jpg?1"allign="left">
+    <h1>ROB <a href="http://devinemiracles.com/twin-flames.html"target="_blank">+ </a><a href="http://i.imgur.com/qe1QhzT.jpg?1"target="_blank">JESS MCDONOUGH</a><br></h1>
+    {% block content %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+	<h2>
+    	<br>WHEN: JULY-30TH 2016
+    	<br>WHAT: SHINDIG
+    	<br>SHOWERED: YES
+    	<br>SEMI-FORMAL: YES
+    	<br>RSVP FOR TIME AND LOCATION AND UPDATES!
+    	<form action="" method="post" name="rsvp">
+    		{{ form.hidden_tag() }}
+    		{{ form.rsvp(size=80) }}<br>
+    		{{ form.guests(size=60) }}<br>
+    		{{ form.consent(size=40) }}<br>
+    		<input type="submit" value="I'll be there">
+    	</form>
+    </h2>
+{% endblock %}
