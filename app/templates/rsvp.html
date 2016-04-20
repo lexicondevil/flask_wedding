@@ -1,17 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 	<h2>
-    	<br>WHEN: JULY-30TH 2016
-    	<br>WHAT: SHINDIG
-    	<br>SHOWERED: YES
-    	<br>SEMI-FORMAL: YES
-    	<br>RSVP FOR TIME AND LOCATION AND UPDATES!
-    	<form action="" method="post" name="rsvp">
-    		{{ form.hidden_tag() }}
-    		{{ form.rsvp(size=80) }}<br>
-    		{{ form.guests(size=60) }}<br>
-    		{{ form.consent(size=40) }}<br>
+    	<br>WHAT: SHINDIG 
+    	<br>What(2): food + drinks + entertainment + nice people
+    	<br>DRESS: showered, semiformal
+    	<br>WHEN: JULY-30TH 2016<br>
+    	<br> THANKS, BUT NO THANKS:</h2><h3>VUVUZELAS
+    	<br>PETS
+    	<br>CHILDREN(zero kids, like none)
+   		<br>BERNIEBROS<br><br>
+   	</h3><h4>
+    	<br>To rsvp, fill out the following:
+    	   	<form action="" method="post" name="rsvp">
+    		{{ form.hidden_tag() }}<br>
+    		YOUR NAME: {{ form.name }}<br>
+	    		{% if form.name.errors %}
+	        		<li><span style="color: red;">Just make a name up</span></li>
+	   			{% endif %}
+    		EMAIL ADDRESS: {{ form.email(size=20) }}<br>
+    			{% if form.email.errors %}
+	        		<li><span style="color: red;">Something like: 'cognitivedissonance_4_hillary2016@aol.com'</span></li>
+	   			{% endif %}
+    		NUMBER OF GUESTS(including yourself): {{ form.guests(size=1) }}<br>
+    			{% if form.guests.errors %}
+	        		<li><span style="color: red;">If you're rollin solo, '0' would be the way to go.</span></li>
+	   			{% endif %}
+    		I HAVE READ AND UNDERSTOOD 'THANKS,BUT NOTHANKS: {{ form.consent }}
+    			{% if form.consent.errors %}
+	        		<li><span style="color: red;">Sorry, but you have to agree to the 'thanks, but no thanks'  - the management</span></li>
+	   			{% endif %}
     		<input type="submit" value="I'll be there">
     	</form>
-    </h2>
+    </h4>
 {% endblock %}

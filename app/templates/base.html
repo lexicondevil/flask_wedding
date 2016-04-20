@@ -8,7 +8,7 @@
   </head>
 <style>
     heydork {
-        Hi friend! You've found me. This is my first flask app! Come to my wedding.
+        Hi friend! You've found me. This is my first flask app and it's disgusting, I'm sorry! Come to my wedding anyway.
     }
 
     body {
@@ -19,8 +19,8 @@
     }
 
     h1 {font-size: 40pt;}
-    h2 {font-size: 20pt;}
-    h3 {font-size: 6pt;}
+    h2 {font-size: 15pt;}
+    h3 {font-size: 10pt;}
 
     a:link, a:visited, a:hover, a:active 
     {
@@ -30,8 +30,18 @@
     }
 </style>
   <body>
-    <img src="http://i.imgur.com/u1dALv2.jpg?1"allign="left"><img src="http://i.imgur.com/u1dALv2.jpg?1"allign="left">
-    <h1>ROB <a href="http://devinemiracles.com/twin-flames.html"target="_blank">+ </a><a href="http://i.imgur.com/qe1QhzT.jpg?1"target="_blank">JESS MCDONOUGH</a><br></h1>
+    <a href="/"><img src="http://i.imgur.com/u1dALv2.jpg?1"allign="left"><img src="http://i.imgur.com/u1dALv2.jpg?1"allign="left"></a>
+    <h1>
+        ROB <a href="http://devinemiracles.com/twin-flames.html"target="_blank">+ </a><a href="http://i.imgur.com/qe1QhzT.jpg?1"target="_blank">JESS MCDONOUGH</a>
+    </h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+            <br><li>{{ message }}<br>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      {% endwith %}
     {% block content %}{% endblock %}
   </body>
 </html>
