@@ -8,8 +8,8 @@ class Rsvps(db.Model):
     guests = db.Column(db.Integer, index=True, unique=False)
     email = db.Column(db.String(120), index=True, unique=True)
 
-    def __init__(self,name,guests,email):
-        self.name = name
-        self.guests = guests
-        self.email = email
+ #   def __init__(self,name,guests,email):
+ #       self.name = name
+ #       self.guests = guests
+ #       self.email = email
 
