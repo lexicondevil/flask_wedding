@@ -24,6 +24,6 @@ def rsvp():
   	flash('When specifically: July 30th, 4pm -> 9pm')
   	flash('Check your {} email address for event information + updates'.format(form.email.data))
   	flash('Questions? Feel free to email/text us!')
-  	return render_template('rsvpeed.html')
+  	return render_template('rsvpeed.html', form=form)
   else:
-  	return render_template('rsvp.html')
+  	return render_template('rsvp.html', form=form)
