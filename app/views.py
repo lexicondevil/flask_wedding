@@ -16,8 +16,8 @@ def rsvp():
             form.email.data,
             form.guests.data
             )
-	db.session.add(newrsvp)
-	db.session.commit
+        db.session.add(newrsvp)
+	db.session.commit()
 	#flash('this is a print for {}'.format(rsvp))
   	flash('We\'ve got {} and your +{} all rsvpeed'.format(form.name.data, form.guests.data))
   	flash('Where specifically: Our backyard, 5040 N Oberlin PDX, 97203')
