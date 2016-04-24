@@ -2,6 +2,7 @@ from flask import render_template, flash, redirect
 from app import app, db
 from .models import Rsvps
 from .forms import RsvpForm
+import time
 
 @app.route('/', methods=['GET'])
 def index():
@@ -18,6 +19,9 @@ def rsvp():
             )
         db.session.add(newrsvp)
 	db.session.commit()
+        time.sleep(3)
+        print 'Saving your information...'
+
 	#flash('this is a print for {}'.format(rsvp))
   	flash('We\'ve got {} and your +{} all rsvpeed'.format(form.name.data, form.guests.data))
   	flash('Where specifically: Our backyard, 5040 N Oberlin PDX, 97203')

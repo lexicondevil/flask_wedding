@@ -7,18 +7,18 @@ class Rsvps(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True, unique=False)
     guests = db.Column(db.Integer, index=True, unique=False)
-    email = db.Column(db.String(120), index=True, unique=True)
+    email = db.Column(db.String(120), index=True, unique=False)
 
-    def __init__(self,name,guests,email):
+    def __init__(self,name,email,guests):
         self.name = name
         self.guests = guests
         self.email = email
 
     def __repr__(self):
-        return 'id: {}, name: {}, guests: {}, email: {}'.format(
+        return 'id: {0}, name: {1}, email: {2}, guests: {3}'.format(
                                                                 self.id,
                                                                 self.name,
-                                                                self.guests,
-                                                                self.email
+                                                                self.email,
+                                                                self.guests
                                                                 )
 
