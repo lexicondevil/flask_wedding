@@ -1,5 +1,6 @@
 from app import db
 
+
 class Rsvps(db.Model):
     __tablename__ = 'rsvps'
 
@@ -8,8 +9,16 @@ class Rsvps(db.Model):
     guests = db.Column(db.Integer, index=True, unique=False)
     email = db.Column(db.String(120), index=True, unique=True)
 
- #   def __init__(self,name,guests,email):
- #       self.name = name
- #       self.guests = guests
- #       self.email = email
+    def __init__(self,name,guests,email):
+        self.name = name
+        self.guests = guests
+        self.email = email
+
+    def __repr__(self):
+        return 'id: {}, name: {}, guests: {}, email: {}'.format(
+                                                                self.id,
+                                                                self.name,
+                                                                self.guests,
+                                                                self.email
+                                                                )
 

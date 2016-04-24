@@ -11,12 +11,12 @@ def index():
 def rsvp():
   form = RsvpForm(csrf_enabled=True)
   if form.validate_on_submit():
-	new_rsvp = Rsvps(
+	newrsvp = Rsvps(
             form.name.data,
             form.email.data,
             form.guests.data
             )
-	db.session.add(new_rsvp)
+	db.session.add(newrsvp)
 	db.session.commit
 	#flash('this is a print for {}'.format(rsvp))
   	flash('We\'ve got {} and your +{} all rsvpeed'.format(form.name.data, form.guests.data))

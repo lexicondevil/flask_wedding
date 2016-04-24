@@ -1,3 +1,1 @@
-web: gunicorn gettingstarted.wsgi --log-file -
-init: python db_create.py
-upgrade: python db_upgrade.py
+web: gunicorn app:app
