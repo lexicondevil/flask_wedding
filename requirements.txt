@@ -2,8 +2,10 @@ alembic==0.8.6
 Babel==2.3.3
 blinker==1.4
 coverage==4.0.3
+cssmin==0.2.0
 decorator==4.0.9
 Flask==0.10.1
+Flask-Assets==0.11
 Flask-Babel==0.9
 flask-heroku==0.1.9
 Flask-Migrate==1.8.0
@@ -17,6 +19,7 @@ flipflop==1.0
 gunicorn==19.4.5
 itsdangerous==0.24
 Jinja2==2.8
+jsmin==2.2.1
 Mako==1.0.4
 MarkupSafe==0.23
 mongoengine==0.10.6
@@ -31,6 +34,7 @@ SQLAlchemy==1.0.12
 sqlalchemy-migrate==0.10.0
 sqlparse==0.1.19
 Tempita==0.5.2
+webassets==0.11.1
 Werkzeug==0.11.8
 wheel==0.24.0
 Whoosh==2.7.4
