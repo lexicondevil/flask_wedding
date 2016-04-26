@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect
 from app import app, db
 from .models import Rsvps
 from .forms import RsvpForm
@@ -8,17 +8,18 @@ import time
 def index():
   return render_template('index.html')
 
-#def rsvp():
+@app.route('/rsvp/', methods=['GET', 'POST'])
+def rsvp():
   form = RsvpForm(csrf_enabled=True)
   if form.validate_on_submit():
       newrsvp = Rsvps(
-            form.name.data,
-            form.email.data,
-            form.guests.data
-            )
+                      form.name.data,
+                      form.email.data,
+                      form.guests.data
+                      )
       db.session.add(newrsvp)
       db.session.commit()
-      time.sleep(1)
+      time.sleep(3)
       print 'Saving your information...'
 
   #flash('this is a print for {}'.format(rsvp))

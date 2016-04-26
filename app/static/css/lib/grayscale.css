@@ -147,7 +147,22 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/thesun.jpg) no-repeat bottom center scroll;
+    background: url(../img/nye_cropped.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro2 {
+    display: table;
+    width: 100vw;
+    height: 100vw;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -161,11 +176,11 @@ a:focus {
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 30px;
+    font-size: 80px;
 }
 
 .intro .intro-body .intro-text {
-    font-size: 18px;
+    font-size: 40px;
 }
 
 @media(min-width:768px) {
@@ -180,6 +195,29 @@ a:focus {
     }
 
     .intro .intro-body .intro-text {
+        font-size: 26px;
+    }
+}
+
+.intro .intro-body2 {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.intro .intro-body2 .brand-heading {
+    font-size: 30px;
+}
+
+.intro .intro-body2 .intro-text {
+    font-size: 18px;
+}
+
+    .intro .intro-body2 .brand-heading {
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    .intro .intro-body2 .intro-text {
         font-size: 26px;
     }
 }

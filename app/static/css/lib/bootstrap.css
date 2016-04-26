@@ -12,10 +12,36 @@ html {
 body {
   margin: 0;
 }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
 summary {
   display: block;
 }
-
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
 a {
   background-color: transparent;
 }
@@ -1071,13 +1097,13 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: ##2d862d;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
-  text-decoration: underline;
+  color: #2d862d;
+  text-decoration: blink;
 }
 a:focus {
   outline: thin dotted;
@@ -2996,7 +3022,6 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #fff;
 }
 .btn:focus,
 .btn:active:focus,
@@ -3035,7 +3060,7 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #FFF;
+  color: #333;
   background-color: #fff;
   border-color: #ccc;
 }
@@ -4704,7 +4729,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   line-height: 1.42857143;
   color: #337ab7;
   text-decoration: none;
-  background-color: #000;
+  background-color: #fff;
   border: 1px solid #ddd;
 }
 .pagination > li:first-child > a,
@@ -4937,8 +4962,8 @@ a.badge:focus {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
-  color: inherit;
-  background-color: #eee;
+  color: white;
+  background-color: black;
 }
 .jumbotron h1,
 .jumbotron .h1 {
