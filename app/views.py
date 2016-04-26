@@ -7,6 +7,7 @@ import time
 @app.route('/', methods=['GET', 'POST'])
 def index():
   form = RsvpForm(csrf_enabled=True)
+  render_template('index.html', form=form)
   if form.validate_on_submit():
       newrsvp = Rsvps(
                       form.name.data,

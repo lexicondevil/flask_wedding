@@ -30,7 +30,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="/">
-                    <i class="fa fa-heart"></i>  <span class="dark">McDonough</span> Town
+                    <i class="fa fa-heart"></i>  <span class="dark">Rob + Jess</span> McDonough
                 </a>
             </div>
 
@@ -59,8 +59,8 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                        <h1 class="brand-heading">We're Gettin Hitched</h1>
-                        <p>(But) We already got married at the courthouse!
+                        <h1 class="brand-heading">Welcome to McDonough Town</h1>
+                        <p>we're gettin hitched at the courthouse (but) you should come to our party
                         </p>
                         <a href="#huh" class="btn page-scroll">
                             <i class="fa fa-chevron-circle-down fa-5x"></i>
@@ -106,7 +106,7 @@
                           <li class="media">
                             <a class="media-center"></a>
                             <div class="media-body">
-                              <h2 class="media-heading">Appearence</h2>
+                              <h2 class="media-heading">Appearance</h2>
                               <p>showered, semiformal</p>
                             </div>
                           </li>
@@ -139,42 +139,20 @@
     </header>
 
     <!-- RSVP AREA -->
+    {% import 'macroform.html' as m %}
     <section id="rsvp" class="container content-section text-center">
         <div class="row">
             <h1 class="display-3">RSVP</h1>
             <hr class="m-y-2">
             <form action="" method="post" name="random" allign="left">
-                <div class="form-group">
-                    {{ form.hidden_tag() }}<br>
-                    NAME: {{ form.name }}<br>
-                    {% if form.name.errors %}
-                    <li><span style="color: red;">Just make a name up</span></li>
-                    {% endif %}
-                </div>
-                <div class="form-group">
-                    EMAIL: {{ form.email }}<br>
-                    {% if form.email.errors %}
-                    <li><span style="color: red;">Something like: 'cognitivedissonance_4_hillary2016@aol.com'</span></li>
-                    {% endif %}
-                </div>
-                <div class="form-group">
-                    # of people attending (you=1): {{ form.guests }}<br>
-                    {% if form.guests.errors %}
-                    <li><span style="color: red;">If you're rollin solo, '0' would be the way to go.</span></li>
-                    {% endif %}
-                </div>
-                <div class="form-group">
-                    I HAVE READ AND UNDERSTOOD 'THANKS,BUT NOTHANKS: {{ form.consent }}<br>
-                    {% if form.consent.errors %}
-                    <li><span style="color: red;">Sorry, but you have to agree to the 'thanks, but no thanks' - the management</span></li>
-                    {% endif %}
-                    <div>
-                  <button type="submit" class="btn btn-primary">RSVP ME</button>
-            </form>
-        </div>
-    </section>
-
-    {% with messages = get_flashed_messages() %}
+                {% call m.render_form(form, action_text='RSVP ME!', class_='login-form') %}
+                    {{ form.hidden_tag() }}
+                    {{ m.render_field(form.name, placeholder='Jess Priest') }}
+                    {{ m.render_field(form.email, placeholder='cognitivedissonance_4_hrc2016@aol.com') }}
+                    {{ m.render_field(form.guests, placeholder='1-10') }}
+                    {{ m.render_field(form.consent) }}
+                {% endcall %}
+                  {% with messages = get_flashed_messages() %}
       {% if messages %}
         {% for message in messages %}
             <br><li>{{ message }}<br>
@@ -183,6 +161,11 @@
       {% endif %}
       {% endwith %}
     {% block content %}{% endblock %}
+            </form>
+        </div>
+    </section>
+
+  
     
         <!-- Footer -->
     <footer>
