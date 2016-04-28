@@ -23,6 +23,7 @@ jsmin==2.2.1
 Mako==1.0.4
 MarkupSafe==0.23
 mongoengine==0.10.6
+newrelic==2.64.0.48
 pbr==1.9.1
 psycopg2==2.6.1
 pymongo==3.2.2
