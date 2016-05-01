@@ -71,21 +71,25 @@ a:focus {
 
 .navbar-custom .navbar-brand {
     font-weight: 700;
+    background-color: #000;
 }
 
 .navbar-custom .navbar-brand:focus {
     outline: 0;
+    background-color: #000;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #000;
+    color: #fff;
+    background-color: #000;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
     outline: 0;
+    background-color: #000;
 }
 
 .navbar-custom a {
@@ -96,12 +100,13 @@ a:focus {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
+    background-color: #000;
 }
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: rgba(255,255,255,.8);
-    background-color: transparent;
+    color: #1d9b6c;
+    background-color: #000;
 }
 
 .navbar-custom .nav li a:focus,
