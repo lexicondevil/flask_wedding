@@ -6,8 +6,11 @@ import time
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+  return render_template('index.html')
+
+@app.route('/rsvp', methods=['GET', 'POST'])
+def rsvp():
   form = RsvpForm(csrf_enabled=True)
-  render_template('index.html', form=form)
   if form.validate_on_submit():
       newrsvp = Rsvps(
                       form.name.data,
@@ -18,13 +21,9 @@ def index():
       db.session.commit()
       time.sleep(3)
       flash('Saving your information...')
-      flash('THANKS FOR COMING TO OUR SHINDIG!')
-      return redirect('/rsvpeed', form=form)
-  return render_template('index.html', form=form)
+      return render_template('rsvpeed.html', form=form)
+  return render_template('rsvp.html', form=form)
 
 @app.route('/rsvpeed', methods=['GET', 'POST'])
-def rsvp():
-  form = RsvpForm(csrf_enabled=True)
-  flash('Saving your information...')
-  flash('THANKS FOR COMING TO OUR SHINDIG!')
-  return render_template('rsvpeed.html', form=form) 
+def rsvpeed():
+  return render_template('rsvpeed.html') 

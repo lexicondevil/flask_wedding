@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<header class="intro2">
 <div class="jumbotron">
   <h1>You're all RSVP(EED)!</h1>
   <div class="row">
@@ -15,7 +16,16 @@
     </a>
   </div>
 </div>
+
+  {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    {% for message in messages %}
+                      <div class="alert alert-success" role="alert"> {{ message }} <br>
+                        {% endfor %}
+                  {% endif %}
+  {% endwith %}
   <p>Thanks for planning ahead! Just look at how excited we are to see you :) We'll keep you updated via email w/ any additional details about the party</p>
 </div>
+</header>
 
 {% endblock %}

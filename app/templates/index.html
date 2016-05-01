@@ -73,7 +73,7 @@
                             <a class="media-center"></a>
                             <div class="media-body">
                               <h2 class="media-heading">Sound ok?</h2>
-                              <p><a href='#rsvp'>please rsvp below!</a></p>
+                              <p><a href='/rsvp'>please rsvp!</a></p>
                             </div>
                           </li>
                         </ul>
@@ -84,30 +84,5 @@
             </div>
         </div>
     </header>
-
-  <!-- RSVP AREA -->
-  {% import 'macroform.html' as m %}
-    <section id="rsvp" class="container content-section text-center">
-        <div class="row">
-            <h1 class="display-3">RSVP</h1>
-            <hr class="m-y-2">
-            <form action="" method="post" name="random" allign="left">
-                {% call m.render_form(form, action_text='RSVP ME!', class_='login-form') %}
-                    {{ form.hidden_tag() }}
-                    {{ m.render_field(form.name, placeholder='Jess Priest') }}
-                    {{ m.render_field(form.email, placeholder='HRC_USA@aol.com') }}
-                    {{ m.render_field(form.guests, placeholder='1-10') }}
-                    {{ m.render_field(form.consent) }}
-                {% endcall %}
-                {% with messages = get_flashed_messages() %}
-                  {% if messages %}
-                    {% for message in messages %}
-                      <div class="alert alert-success" role="alert"> {{ message }} <br>
-                        {% endfor %}
-                  {% endif %}
-                {% endwith %}
-            </form>
-        </div>
-    </section>
 
 {% endblock %}

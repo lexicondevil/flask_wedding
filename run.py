@@ -1,3 +1,3 @@
-#!/Users/Rob/Envs/flask_wedding/bin/python
+#!/Users/rmcdonough/Envs/semi/bin/python
 from app import app
 app.run(debug=True)
