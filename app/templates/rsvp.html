@@ -7,23 +7,36 @@
         <div class="row">
             <h1 class="display-3">RSVP</h1>
             <hr class="m-y-2">
+        </div>
+    </section>
+    <div class="jumbotron">
             <form action="" method="post" name="random" allign="left">
                 {% call m.render_form(form, action_text='RSVP ME!', class_='login-form') %}
                     {{ form.hidden_tag() }}
-                    {{ m.render_field(form.name, placeholder='Jess Priest') }}
-                    {{ m.render_field(form.email, placeholder='email@email.com') }}
-                    {{ m.render_field(form.guests, placeholder='1-10') }}
-                    {{ m.render_field(form.consent) }}
+                <div class="row">
+                    <div class="col-xs-12 col-md-4"> 
+                    	{{ m.render_field(form.name, placeholder='Jess Priest') }}
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                    	{{ m.render_field(form.email, placeholder='email@email.com') }}
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                    	{{ m.render_field(form.guests, placeholder='1-10') }}
+                    </div>
+                    <div class="col-xs-12">
+                    	{{ m.render_field(form.consent) }}
+                	</div>
+                </div>
+            </form>
                 {% endcall %}
                 {% with messages = get_flashed_messages() %}
                   {% if messages %}
                     {% for message in messages %}
-                      <div class="alert alert-success" role="alert"> {{ message }} <br>
+                      <div class="alert alert-success" role="alert"> 
+                      	{{ message }} <br>
+                      </div>
                         {% endfor %}
                   {% endif %}
                 {% endwith %}
-            </form>
-        </div>
-    </section>
-    	
+
 {% endblock %}
