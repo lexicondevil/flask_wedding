@@ -167,6 +167,11 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
     
     background-color: #000;
     -webkit-background-size: cover;

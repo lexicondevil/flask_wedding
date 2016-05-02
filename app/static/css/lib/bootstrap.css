@@ -10,6 +10,11 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
   margin: 0;
 }
 article,
@@ -1583,8 +1588,8 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1604,8 +1609,8 @@ pre code {
   }
 }
 .container-fluid {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4979,8 +4984,8 @@ a.badge:focus {
 }
 .container .jumbotron,
 .container-fluid .jumbotron {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0;
+  padding-left: 0;
   border-radius: 6px;
 }
 .jumbotron .container {
@@ -4993,8 +4998,8 @@ a.badge:focus {
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 0;
+    padding-left: 0;
   }
   .jumbotron h1,
   .jumbotron .h1 {
