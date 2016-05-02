@@ -25,9 +25,8 @@
                     </div>
                     <div class="col-xs-12">
                     	{{ m.render_field(form.consent) }}
-                	</div>
+                	   </div>
                 </div>
-            </form>
                 {% endcall %}
                 {% with messages = get_flashed_messages() %}
                   {% if messages %}
@@ -38,5 +37,5 @@
                         {% endfor %}
                   {% endif %}
                 {% endwith %}
-
+            </form>
 {% endblock %}
