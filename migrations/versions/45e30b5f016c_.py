@@ -23,7 +23,7 @@ def upgrade():
     sa.Column('email', sa.String(length=120), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_index(op.f('ix_rsvps_email'), 'rsvps', ['email'], unique=True)
+    op.create_index(op.f('ix_rsvps_email'), 'rsvps', ['email'], unique=False)
     op.create_index(op.f('ix_rsvps_guests'), 'rsvps', ['guests'], unique=False)
     op.create_index(op.f('ix_rsvps_name'), 'rsvps', ['name'], unique=False)
     ### end Alembic commands ###
